@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		763691AC1BFF74CF009ABD65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 763691AB1BFF74CF009ABD65 /* main.m */; };
+		763691AF1BFF74CF009ABD65 /* JFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 763691AE1BFF74CF009ABD65 /* JFAppDelegate.m */; };
+		763691B71BFF74CF009ABD65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 763691B61BFF74CF009ABD65 /* Assets.xcassets */; };
+		763691C41BFF7619009ABD65 /* JFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 763691C31BFF7619009ABD65 /* JFRootViewController.m */; };
+		763691C61BFF76A0009ABD65 /* JF3DTouchButton.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 763691C51BFF76A0009ABD65 /* JF3DTouchButton.podspec */; };
+		763691CA1BFF76E2009ABD65 /* JF3DTouchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 763691C91BFF76E2009ABD65 /* JF3DTouchButton.m */; };
+		765D19821BFFABB0008C9093 /* JF3DTouchButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 765D19811BFFABB0008C9093 /* JF3DTouchButtonTests.m */; };
+		765D198B1BFFB04E008C9093 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765D19891BFFB04E008C9093 /* LaunchScreen.storyboard */; };
+		765D19901BFFB1E9008C9093 /* __JF3DTouchButton+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 765D198F1BFFB1E9008C9093 /* __JF3DTouchButton+BackgroundColor.m */; };
+		765D19941BFFBD69008C9093 /* __JF3DTouchButton+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 765D19931BFFBD69008C9093 /* __JF3DTouchButton+Size.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		765D19841BFFABB0008C9093 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7636919F1BFF74CF009ABD65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 763691A61BFF74CF009ABD65;
+			remoteInfo = JF3DTouchButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		763691A71BFF74CF009ABD65 /* JF3DTouchButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JF3DTouchButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		763691AB1BFF74CF009ABD65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		763691AD1BFF74CF009ABD65 /* JFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFAppDelegate.h; sourceTree = "<group>"; };
+		763691AE1BFF74CF009ABD65 /* JFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFAppDelegate.m; sourceTree = "<group>"; };
+		763691B61BFF74CF009ABD65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		763691BB1BFF74CF009ABD65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		763691C21BFF7619009ABD65 /* JFRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFRootViewController.h; sourceTree = "<group>"; };
+		763691C31BFF7619009ABD65 /* JFRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFRootViewController.m; sourceTree = "<group>"; };
+		763691C51BFF76A0009ABD65 /* JF3DTouchButton.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JF3DTouchButton.podspec; sourceTree = "<group>"; };
+		763691C81BFF76E2009ABD65 /* JF3DTouchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JF3DTouchButton.h; path = JF3DTouchButton/JF3DTouchButton.h; sourceTree = "<group>"; };
+		763691C91BFF76E2009ABD65 /* JF3DTouchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JF3DTouchButton.m; path = JF3DTouchButton/JF3DTouchButton.m; sourceTree = "<group>"; };
+		765D197F1BFFABB0008C9093 /* JF3DTouchButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JF3DTouchButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		765D19811BFFABB0008C9093 /* JF3DTouchButtonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JF3DTouchButtonTests.m; sourceTree = "<group>"; };
+		765D19831BFFABB0008C9093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		765D198A1BFFB04E008C9093 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		765D198E1BFFB1E9008C9093 /* __JF3DTouchButton+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "__JF3DTouchButton+BackgroundColor.h"; path = "JF3DTouchButton/BackgroundColor/__JF3DTouchButton+BackgroundColor.h"; sourceTree = "<group>"; };
+		765D198F1BFFB1E9008C9093 /* __JF3DTouchButton+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "__JF3DTouchButton+BackgroundColor.m"; path = "JF3DTouchButton/BackgroundColor/__JF3DTouchButton+BackgroundColor.m"; sourceTree = "<group>"; };
+		765D19921BFFBD69008C9093 /* __JF3DTouchButton+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "__JF3DTouchButton+Size.h"; path = "JF3DTouchButton/Size/__JF3DTouchButton+Size.h"; sourceTree = "<group>"; };
+		765D19931BFFBD69008C9093 /* __JF3DTouchButton+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "__JF3DTouchButton+Size.m"; path = "JF3DTouchButton/Size/__JF3DTouchButton+Size.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		763691A41BFF74CF009ABD65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		765D197C1BFFABB0008C9093 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7636919E1BFF74CF009ABD65 = {
+			isa = PBXGroup;
+			children = (
+				763691A91BFF74CF009ABD65 /* JF3DTouchButton */,
+				763691C51BFF76A0009ABD65 /* JF3DTouchButton.podspec */,
+				765D19801BFFABB0008C9093 /* JF3DTouchButtonTests */,
+				763691A81BFF74CF009ABD65 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		763691A81BFF74CF009ABD65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				763691A71BFF74CF009ABD65 /* JF3DTouchButton.app */,
+				765D197F1BFFABB0008C9093 /* JF3DTouchButtonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		763691A91BFF74CF009ABD65 /* JF3DTouchButton */ = {
+			isa = PBXGroup;
+			children = (
+				763691C71BFF76CF009ABD65 /* JF3DTouchButton */,
+				763691B61BFF74CF009ABD65 /* Assets.xcassets */,
+				763691BB1BFF74CF009ABD65 /* Info.plist */,
+				763691AD1BFF74CF009ABD65 /* JFAppDelegate.h */,
+				763691AE1BFF74CF009ABD65 /* JFAppDelegate.m */,
+				763691C11BFF7619009ABD65 /* Root View Controller */,
+				763691AA1BFF74CF009ABD65 /* Supporting Files */,
+			);
+			path = JF3DTouchButton;
+			sourceTree = "<group>";
+		};
+		763691AA1BFF74CF009ABD65 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				765D19891BFFB04E008C9093 /* LaunchScreen.storyboard */,
+				763691AB1BFF74CF009ABD65 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		763691C11BFF7619009ABD65 /* Root View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				763691C21BFF7619009ABD65 /* JFRootViewController.h */,
+				763691C31BFF7619009ABD65 /* JFRootViewController.m */,
+			);
+			path = "Root View Controller";
+			sourceTree = "<group>";
+		};
+		763691C71BFF76CF009ABD65 /* JF3DTouchButton */ = {
+			isa = PBXGroup;
+			children = (
+				765D198D1BFFB1B7008C9093 /* BackgroundColor */,
+				763691C81BFF76E2009ABD65 /* JF3DTouchButton.h */,
+				763691C91BFF76E2009ABD65 /* JF3DTouchButton.m */,
+				765D19911BFFBBAB008C9093 /* Size */,
+			);
+			name = JF3DTouchButton;
+			sourceTree = "<group>";
+		};
+		765D19801BFFABB0008C9093 /* JF3DTouchButtonTests */ = {
+			isa = PBXGroup;
+			children = (
+				765D19811BFFABB0008C9093 /* JF3DTouchButtonTests.m */,
+				765D19831BFFABB0008C9093 /* Info.plist */,
+			);
+			path = JF3DTouchButtonTests;
+			sourceTree = "<group>";
+		};
+		765D198D1BFFB1B7008C9093 /* BackgroundColor */ = {
+			isa = PBXGroup;
+			children = (
+				765D198E1BFFB1E9008C9093 /* __JF3DTouchButton+BackgroundColor.h */,
+				765D198F1BFFB1E9008C9093 /* __JF3DTouchButton+BackgroundColor.m */,
+			);
+			name = BackgroundColor;
+			sourceTree = "<group>";
+		};
+		765D19911BFFBBAB008C9093 /* Size */ = {
+			isa = PBXGroup;
+			children = (
+				765D19921BFFBD69008C9093 /* __JF3DTouchButton+Size.h */,
+				765D19931BFFBD69008C9093 /* __JF3DTouchButton+Size.m */,
+			);
+			name = Size;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		763691A61BFF74CF009ABD65 /* JF3DTouchButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 763691BE1BFF74CF009ABD65 /* Build configuration list for PBXNativeTarget "JF3DTouchButton" */;
+			buildPhases = (
+				763691A31BFF74CF009ABD65 /* Sources */,
+				763691A41BFF74CF009ABD65 /* Frameworks */,
+				763691A51BFF74CF009ABD65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JF3DTouchButton;
+			productName = JF3DTouchButton;
+			productReference = 763691A71BFF74CF009ABD65 /* JF3DTouchButton.app */;
+			productType = "com.apple.product-type.application";
+		};
+		765D197E1BFFABB0008C9093 /* JF3DTouchButtonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 765D19861BFFABB0008C9093 /* Build configuration list for PBXNativeTarget "JF3DTouchButtonTests" */;
+			buildPhases = (
+				765D197B1BFFABB0008C9093 /* Sources */,
+				765D197C1BFFABB0008C9093 /* Frameworks */,
+				765D197D1BFFABB0008C9093 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				765D19851BFFABB0008C9093 /* PBXTargetDependency */,
+			);
+			name = JF3DTouchButtonTests;
+			productName = JF3DTouchButtonTests;
+			productReference = 765D197F1BFFABB0008C9093 /* JF3DTouchButtonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7636919F1BFF74CF009ABD65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Jeremy Fuellert";
+				TargetAttributes = {
+					763691A61BFF74CF009ABD65 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = JLLK4TFP4P;
+					};
+					765D197E1BFFABB0008C9093 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 763691A61BFF74CF009ABD65;
+					};
+				};
+			};
+			buildConfigurationList = 763691A21BFF74CF009ABD65 /* Build configuration list for PBXProject "JF3DTouchButton" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7636919E1BFF74CF009ABD65;
+			productRefGroup = 763691A81BFF74CF009ABD65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				763691A61BFF74CF009ABD65 /* JF3DTouchButton */,
+				765D197E1BFFABB0008C9093 /* JF3DTouchButtonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		763691A51BFF74CF009ABD65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				765D198B1BFFB04E008C9093 /* LaunchScreen.storyboard in Resources */,
+				763691B71BFF74CF009ABD65 /* Assets.xcassets in Resources */,
+				763691C61BFF76A0009ABD65 /* JF3DTouchButton.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		765D197D1BFFABB0008C9093 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		763691A31BFF74CF009ABD65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				763691AF1BFF74CF009ABD65 /* JFAppDelegate.m in Sources */,
+				765D19941BFFBD69008C9093 /* __JF3DTouchButton+Size.m in Sources */,
+				763691AC1BFF74CF009ABD65 /* main.m in Sources */,
+				763691CA1BFF76E2009ABD65 /* JF3DTouchButton.m in Sources */,
+				763691C41BFF7619009ABD65 /* JFRootViewController.m in Sources */,
+				765D19901BFFB1E9008C9093 /* __JF3DTouchButton+BackgroundColor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		765D197B1BFFABB0008C9093 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				765D19821BFFABB0008C9093 /* JF3DTouchButtonTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		765D19851BFFABB0008C9093 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 763691A61BFF74CF009ABD65 /* JF3DTouchButton */;
+			targetProxy = 765D19841BFFABB0008C9093 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		765D19891BFFB04E008C9093 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				765D198A1BFFB04E008C9093 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		763691BC1BFF74CF009ABD65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		763691BD1BFF74CF009ABD65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		763691BF1BFF74CF009ABD65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = JF3DTouchButton/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jeremy-Fuellert.JF3DTouchButton";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		763691C01BFF74CF009ABD65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = JF3DTouchButton/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jeremy-Fuellert.JF3DTouchButton";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		765D19871BFFABB0008C9093 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JF3DTouchButtonTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jeremy-Fuellert.JF3DTouchButtonTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JF3DTouchButton.app/JF3DTouchButton";
+			};
+			name = Debug;
+		};
+		765D19881BFFABB0008C9093 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JF3DTouchButtonTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jeremy-Fuellert.JF3DTouchButtonTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JF3DTouchButton.app/JF3DTouchButton";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		763691A21BFF74CF009ABD65 /* Build configuration list for PBXProject "JF3DTouchButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				763691BC1BFF74CF009ABD65 /* Debug */,
+				763691BD1BFF74CF009ABD65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		763691BE1BFF74CF009ABD65 /* Build configuration list for PBXNativeTarget "JF3DTouchButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				763691BF1BFF74CF009ABD65 /* Debug */,
+				763691C01BFF74CF009ABD65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		765D19861BFFABB0008C9093 /* Build configuration list for PBXNativeTarget "JF3DTouchButtonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				765D19871BFFABB0008C9093 /* Debug */,
+				765D19881BFFABB0008C9093 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7636919F1BFF74CF009ABD65 /* Project object */;
+}
