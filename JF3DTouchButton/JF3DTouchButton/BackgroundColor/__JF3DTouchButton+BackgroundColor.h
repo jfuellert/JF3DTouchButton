@@ -10,7 +10,7 @@
 
 @interface JF3DTouchButton (BackgroundColor)
 
-+ (BOOL)canUpdateBackgroundColorWithStateDictionary:(nonnull NSDictionary *)stateDictionary;
+- (BOOL)canUpdateBackgroundColorWithStateDictionary:(nonnull NSDictionary *)stateDictionary;
 + (nonnull NSMutableDictionary *)updateBackgroundColor:(nullable UIColor *)backgroundColor forState:(UIControlState)state stateDictionary:(nonnull NSMutableDictionary *)stateDictionary;
 + (nullable UIColor *)backgroundColorForState:(UIControlState)state stateDictionary:(nonnull NSDictionary *)stateDictionary;
 + (nullable UIColor *)backgroundColorWithForce:(const CGFloat)force normalColor:(nonnull UIColor const*)normalColor highlightColor:(nonnull UIColor const*)highlightColor;

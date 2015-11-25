@@ -10,4 +10,6 @@
 
 @interface JF3DTouchButton (Image)
 
+- (BOOL)canUpdateImage;
+
 @end

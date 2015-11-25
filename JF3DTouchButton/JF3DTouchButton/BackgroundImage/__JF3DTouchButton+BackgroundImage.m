@@ -10,5 +10,10 @@
 
 @implementation JF3DTouchButton (BackgroundImage)
 
+- (BOOL)canUpdateBackgroundImage {
+
+    return self.responsiveBackgroundImage && [self backgroundImageForState:UIControlStateNormal] && [self backgroundImageForState:UIControlStateHighlighted];
+
+}
 
 @end

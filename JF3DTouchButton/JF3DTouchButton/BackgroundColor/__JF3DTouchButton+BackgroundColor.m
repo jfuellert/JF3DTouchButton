@@ -14,9 +14,9 @@ NSString *const kJF3DTouchButton_KeyStateDictionaryHighlightColor = @"JF3DTouchB
 
 @implementation JF3DTouchButton (BackgroundColor)
 
-+ (BOOL)canUpdateBackgroundColorWithStateDictionary:(nonnull NSDictionary *)stateDictionary {
+- (BOOL)canUpdateBackgroundColorWithStateDictionary:(nonnull NSDictionary *)stateDictionary {
     
-    return [stateDictionary.allKeys containsObject:kJF3DTouchButton_KeyStateDictionaryNormalColor] && [stateDictionary.allKeys containsObject:kJF3DTouchButton_KeyStateDictionaryHighlightColor];
+    return self.responsiveBackgroundColor && [stateDictionary.allKeys containsObject:kJF3DTouchButton_KeyStateDictionaryNormalColor] && [stateDictionary.allKeys containsObject:kJF3DTouchButton_KeyStateDictionaryHighlightColor];
 }
 
 + (nonnull NSMutableDictionary *)updateBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state stateDictionary:(NSMutableDictionary *)stateDictionary {

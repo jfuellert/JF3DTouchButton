@@ -14,9 +14,9 @@ NSString *const kJF3DTouchButton_KeyStateDictionaryHighlightSize = @"JF3DTouchBu
 
 @implementation JF3DTouchButton (Size)
 
-+ (BOOL)canUpdateSizeWithStateDictionary:(nonnull NSDictionary *)stateDictionary {
+- (BOOL)canUpdateSizeWithStateDictionary:(nonnull NSDictionary *)stateDictionary {
     
-    return [stateDictionary.allKeys containsObject:kJF3DTouchButton_KeyStateDictionaryNormalSize] && [stateDictionary.allKeys containsObject:kJF3DTouchButton_KeyStateDictionaryHighlightSize];
+    return self.responsiveSize && [stateDictionary.allKeys containsObject:kJF3DTouchButton_KeyStateDictionaryNormalSize] && [stateDictionary.allKeys containsObject:kJF3DTouchButton_KeyStateDictionaryHighlightSize];
 }
 
 + (nonnull NSMutableDictionary *)updateFrame:(CGRect)frame forState:(UIControlState)state stateDictionary:(nonnull NSMutableDictionary *)stateDictionary {

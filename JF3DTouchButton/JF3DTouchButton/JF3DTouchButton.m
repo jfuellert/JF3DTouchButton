@@ -14,6 +14,8 @@
 @interface JF3DTouchButton ()
 
 @property (nonatomic, strong) NSMutableDictionary *stateDictionary;
+@property (nonatomic, strong) UIImageView *responsiveImageView;
+@property (nonatomic, strong) UIImageView *responsiveBackgroundImageView;
 
 @end
 
@@ -47,12 +49,29 @@
     return _stateDictionary;
 }
 
+- (UIImageView *)responsiveImageView {
+    
+    if(!_responsiveImageView) {
+        _responsiveImageView = [[UIImageView alloc] init];
+    }
+    
+    return _responsiveImageView;
+}
+
+- (UIImageView *)responsiveBackgroundImageView {
+    
+    if(!_responsiveBackgroundImageView) {
+        _responsiveBackgroundImageView = [[UIImageView alloc] init];
+    }
+    
+    return _responsiveBackgroundImageView;
+}
+
 #pragma mark - Touches
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
     
-    [self updateBackgroundColorWithForce:0.0f];
-    [self updateSizeWithForce:0.0f];
+    [self resetForceProperties];
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -64,15 +83,13 @@
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesCancelled:touches withEvent:event];
  
-    [self updateBackgroundColorWithForce:0.0f];
-    [self updateSizeWithForce:0.0f];
+    [self resetForceProperties];
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesEnded:touches withEvent:event];
     
-    [self updateBackgroundColorWithForce:0.0f];
-    [self updateSizeWithForce:0.0f];
+    [self resetForceProperties];
 }
 
 #pragma mark - Background color
@@ -107,7 +124,37 @@
     return frame.size;
 }
 
+#pragma mark - Image
+- (void)setImage:(UIImage *)image forState:(UIControlState)state {
+    [super setImage:image forState:state];
+    
+    if([self canUpdateImage]) {
+        [self insertSubview:self.responsiveImageView atIndex:0];
+    }
+
+    [self updateImageWithForce:0.0f];
+}
+
+#pragma mark - Background image
+- (void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state {
+    [super setBackgroundImage:image forState:state];
+    
+    if([self canUpdateBackgroundImage]) {
+        [self insertSubview:self.responsiveBackgroundImageView atIndex:0];
+    }
+    
+    [self updateBackgroundColorWithForce:0.0f];
+}
+
 #pragma mark - Updates
+- (void)resetForceProperties {
+    
+    [self updateBackgroundColorWithForce:0.0f];
+    [self updateSizeWithForce:0.0f];
+    [self updateImageWithForce:0.0f];
+    [self updateBackgroundImageWithForce:0.0f];
+}
+
 - (void)updateForcePropertiesWithTouches:(NSSet<UITouch *> *)touches {
 
     CGFloat force;
@@ -120,11 +167,13 @@
     
     [self updateBackgroundColorWithForce:force];
     [self updateSizeWithForce:force];
+    [self updateImageWithForce:force];
+    [self updateBackgroundImageWithForce:force];
 }
 
 - (void)updateBackgroundColorWithForce:(const CGFloat)force {
     
-    if(![self canUpdateBackgroundColor]) {
+    if(![self canUpdateBackgroundColorWithStateDictionary:self.stateDictionary]) {
         return;
     }
     
@@ -138,7 +187,7 @@
 
 - (void)updateSizeWithForce:(const CGFloat)force {
 
-    if(![self canUpdateSize]) {
+    if(![self canUpdateSizeWithStateDictionary:self.stateDictionary]) {
         return;
     }
     
@@ -150,14 +199,33 @@
     self.bounds = [[self class] frameWithForce:force highlightSize:highlightFrame.size normalFrame:normalFrame contentMode:self.contentMode];;
 }
 
-- (BOOL)canUpdateBackgroundColor {
+- (void)updateImageWithForce:(const CGFloat)force {
     
-    return self.responsiveBackgroundColor && [[self class] canUpdateBackgroundColorWithStateDictionary:self.stateDictionary];
+    if(![self canUpdateImage]) {
+        return;
+    }
+    
+    const UIControlState normalState    = [self normalState];
+    const UIControlState highlightState = [self highlightState];
+    UIImage const *normalImage          = [self imageForState:normalState];
+    UIImage const *highlightImage       = [self imageForState:highlightState];
+    
+    self.responsiveImageView.alpha = 0.0f;
+
 }
 
-- (BOOL)canUpdateSize {
+- (void)updateBackgroundImageWithForce:(const CGFloat)force {
     
-    return self.responsiveSize && [[self class] canUpdateSizeWithStateDictionary:self.stateDictionary];
+    if(![self canUpdateBackgroundImage]) {
+        return;
+    }
+    
+    const UIControlState normalState    = [self normalState];
+    const UIControlState highlightState = [self highlightState];
+    UIImage const *normalImage          = [self backgroundImageForState:normalState];
+    UIImage const *highlightImage       = [self backgroundImageForState:highlightState];
+    
+    self.responsiveBackgroundImageView.alpha = 0.0f;
 }
 
 #pragma mark - Utilities

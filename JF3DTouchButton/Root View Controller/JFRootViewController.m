@@ -72,6 +72,8 @@
     if(!_touchButtonImage) {
         _touchButtonImage                 = [self button];
         _touchButtonImage.backgroundColor = [UIColor lightGrayColor];
+        [_touchButtonImage setImage:[UIImage imageNamed:@"placeholderNormal"] forState:UIControlStateNormal];
+        [_touchButtonImage setImage:[UIImage imageNamed:@"placeholderHighlight"] forState:UIControlStateHighlighted];
     }
     
     return _touchButtonImage;
@@ -82,6 +84,8 @@
     if(!_touchButtonBackgroundImage) {
         _touchButtonBackgroundImage                 = [self button];
         _touchButtonBackgroundImage.backgroundColor = [UIColor lightGrayColor];
+        [_touchButtonBackgroundImage setBackgroundImage:[UIImage imageNamed:@"placeholderNormal"] forState:UIControlStateNormal];
+        [_touchButtonBackgroundImage setBackgroundImage:[UIImage imageNamed:@"placeholderHighlight"] forState:UIControlStateHighlighted];
     }
     
     return _touchButtonBackgroundImage;
@@ -96,6 +100,8 @@
         [_touchButtonAll setBackgroundColor:[UIColor colorWithWhite:0.0f alpha:0.6f] forState:UIControlStateHighlighted];
         [_touchButtonAll setSize:CGSizeMake(100.0f, 100.0f) forState:UIControlStateNormal];
         [_touchButtonAll setSize:CGSizeMake(80.0f, 80.0f) forState:UIControlStateHighlighted];
+        [_touchButtonAll setImage:[UIImage imageNamed:@"placeholderNormal"] forState:UIControlStateNormal];
+        [_touchButtonAll setImage:[UIImage imageNamed:@"placeholderHighlight"] forState:UIControlStateHighlighted];
     }
     
     return _touchButtonAll;
