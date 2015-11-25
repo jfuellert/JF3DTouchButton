@@ -16,6 +16,12 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface JF3DTouchButton : UIButton
 /** Determines if the size will change based on a given force. Default is YES. */
 @property (nonatomic, assign) BOOL responsiveSize;
 
+/** Determines if the image will change based on a given force. Default is YES. */
+@property (nonatomic, assign) BOOL responsiveImage;
+
+/** Determines if the background image will change based on a given force. Default is YES. */
+@property (nonatomic, assign) BOOL responsiveBackgroundImage;
+
 #pragma mark - Background color
 /** Sets the background color to use for the specified button state. */
 - (void)setBackgroundColor:(nullable UIColor *)color forState:(UIControlState)state UI_APPEARANCE_SELECTOR;
@@ -25,8 +31,6 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface JF3DTouchButton : UIButton
 
 #pragma mark - Size
 /** Sets the size to use for the specified button state. */
-
-#warning TODO : APPEARANCE
 - (void)setSize:(CGSize)size forState:(UIControlState)state UI_APPEARANCE_SELECTOR;
 
 /** Returns the size for the specified button state. */

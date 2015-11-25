@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76183C441C05548400DCC3B8 /* __JF3DTouchButton+BackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 76183C431C05548400DCC3B8 /* __JF3DTouchButton+BackgroundImage.m */; };
+		76183C481C05551700DCC3B8 /* __JF3DTouchButton+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 76183C471C05551700DCC3B8 /* __JF3DTouchButton+Image.m */; };
 		763691AC1BFF74CF009ABD65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 763691AB1BFF74CF009ABD65 /* main.m */; };
 		763691AF1BFF74CF009ABD65 /* JFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 763691AE1BFF74CF009ABD65 /* JFAppDelegate.m */; };
 		763691B71BFF74CF009ABD65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 763691B61BFF74CF009ABD65 /* Assets.xcassets */; };
@@ -30,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76183C421C05548400DCC3B8 /* __JF3DTouchButton+BackgroundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "__JF3DTouchButton+BackgroundImage.h"; path = "JF3DTouchButton/BackgroundImage/__JF3DTouchButton+BackgroundImage.h"; sourceTree = "<group>"; };
+		76183C431C05548400DCC3B8 /* __JF3DTouchButton+BackgroundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "__JF3DTouchButton+BackgroundImage.m"; path = "JF3DTouchButton/BackgroundImage/__JF3DTouchButton+BackgroundImage.m"; sourceTree = "<group>"; };
+		76183C461C05551700DCC3B8 /* __JF3DTouchButton+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "__JF3DTouchButton+Image.h"; path = "JF3DTouchButton/Image/__JF3DTouchButton+Image.h"; sourceTree = "<group>"; };
+		76183C471C05551700DCC3B8 /* __JF3DTouchButton+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "__JF3DTouchButton+Image.m"; path = "JF3DTouchButton/Image/__JF3DTouchButton+Image.m"; sourceTree = "<group>"; };
 		763691A71BFF74CF009ABD65 /* JF3DTouchButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JF3DTouchButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		763691AB1BFF74CF009ABD65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		763691AD1BFF74CF009ABD65 /* JFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFAppDelegate.h; sourceTree = "<group>"; };
@@ -69,6 +75,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76183C411C05545900DCC3B8 /* BackgroundImage */ = {
+			isa = PBXGroup;
+			children = (
+				76183C421C05548400DCC3B8 /* __JF3DTouchButton+BackgroundImage.h */,
+				76183C431C05548400DCC3B8 /* __JF3DTouchButton+BackgroundImage.m */,
+			);
+			name = BackgroundImage;
+			sourceTree = "<group>";
+		};
+		76183C451C0554FA00DCC3B8 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				76183C461C05551700DCC3B8 /* __JF3DTouchButton+Image.h */,
+				76183C471C05551700DCC3B8 /* __JF3DTouchButton+Image.m */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
 		7636919E1BFF74CF009ABD65 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				765D198D1BFFB1B7008C9093 /* BackgroundColor */,
+				76183C411C05545900DCC3B8 /* BackgroundImage */,
+				76183C451C0554FA00DCC3B8 /* Image */,
 				763691C81BFF76E2009ABD65 /* JF3DTouchButton.h */,
 				763691C91BFF76E2009ABD65 /* JF3DTouchButton.m */,
 				765D19911BFFBBAB008C9093 /* Size */,
@@ -259,11 +285,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76183C441C05548400DCC3B8 /* __JF3DTouchButton+BackgroundImage.m in Sources */,
 				763691AF1BFF74CF009ABD65 /* JFAppDelegate.m in Sources */,
 				765D19941BFFBD69008C9093 /* __JF3DTouchButton+Size.m in Sources */,
 				763691AC1BFF74CF009ABD65 /* main.m in Sources */,
 				763691CA1BFF76E2009ABD65 /* JF3DTouchButton.m in Sources */,
 				763691C41BFF7619009ABD65 /* JFRootViewController.m in Sources */,
+				76183C481C05551700DCC3B8 /* __JF3DTouchButton+Image.m in Sources */,
 				765D19901BFFB1E9008C9093 /* __JF3DTouchButton+BackgroundColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

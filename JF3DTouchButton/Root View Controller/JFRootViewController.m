@@ -14,6 +14,7 @@
 @property (nonatomic, strong) JF3DTouchButton *touchButtonBackgroundColor;
 @property (nonatomic, strong) JF3DTouchButton *touchButtonSize;
 @property (nonatomic, strong) JF3DTouchButton *touchButtonImage;
+@property (nonatomic, strong) JF3DTouchButton *touchButtonBackgroundImage;
 @property (nonatomic, strong) JF3DTouchButton *touchButtonAll;
 
 @end
@@ -29,6 +30,7 @@
     [self.view addSubview:self.touchButtonBackgroundColor];
     [self.view addSubview:self.touchButtonSize];
     [self.view addSubview:self.touchButtonImage];
+    [self.view addSubview:self.touchButtonBackgroundImage];
     [self.view addSubview:self.touchButtonAll];
 }
 
@@ -38,7 +40,8 @@
     self.touchButtonBackgroundColor.center = CGPointMake(self.view.center.x, 80.0f);
     self.touchButtonSize.center            = CGPointMake(self.view.center.x, self.touchButtonBackgroundColor.center.y + 100.0f);
     self.touchButtonImage.center           = CGPointMake(self.view.center.x, self.touchButtonSize.center.y + 100.0f);
-    self.touchButtonAll.center             = CGPointMake(self.view.center.x, self.touchButtonImage.center.y + 100.0f);
+    self.touchButtonBackgroundImage.center = CGPointMake(self.view.center.x, self.touchButtonImage.center.y + 100.0f);
+    self.touchButtonAll.center             = CGPointMake(self.view.center.x, self.touchButtonBackgroundImage.center.y + 100.0f);
 }
 
 - (JF3DTouchButton *)touchButtonBackgroundColor {
@@ -72,6 +75,16 @@
     }
     
     return _touchButtonImage;
+}
+
+- (JF3DTouchButton *)touchButtonBackgroundImage {
+    
+    if(!_touchButtonBackgroundImage) {
+        _touchButtonBackgroundImage                 = [self button];
+        _touchButtonBackgroundImage.backgroundColor = [UIColor lightGrayColor];
+    }
+    
+    return _touchButtonBackgroundImage;
 }
 
 - (JF3DTouchButton *)touchButtonAll {

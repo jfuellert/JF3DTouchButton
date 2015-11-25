@@ -7,6 +7,8 @@
 //
 
 #import "__JF3DTouchButton+BackgroundColor.h"
+#import "__JF3DTouchButton+BackgroundImage.h"
+#import "__JF3DTouchButton+Image.h"
 #import "__JF3DTouchButton+Size.h"
 
 @interface JF3DTouchButton ()
@@ -29,6 +31,8 @@
     if(self) {
         _responsiveBackgroundColor = YES;
         _responsiveSize            = YES;
+        _responsiveImage           = YES;
+        _responsiveBackgroundImage = YES;
     }
     
     return self;
