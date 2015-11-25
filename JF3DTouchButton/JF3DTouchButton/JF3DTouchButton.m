@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) NSMutableDictionary *stateDictionary;
 @property (nonatomic, strong) UIImageView *responsiveImageView;
+@property (nonatomic, strong) UIImageView *backgroundImageView;
 @property (nonatomic, strong) UIImageView *responsiveBackgroundImageView;
 
 @end
@@ -56,6 +57,15 @@
     }
     
     return _responsiveImageView;
+}
+
+- (UIImageView *)backgroundImageView {
+    
+    if(!_backgroundImageView) {
+        _backgroundImageView = [[UIImageView alloc] init];
+    }
+    
+    return _backgroundImageView;
 }
 
 - (UIImageView *)responsiveBackgroundImageView {
@@ -126,24 +136,48 @@
 
 #pragma mark - Image
 - (void)setImage:(UIImage *)image forState:(UIControlState)state {
-    [super setImage:image forState:state];
     
-    if([self canUpdateImage]) {
-        [self insertSubview:self.responsiveImageView atIndex:0];
+    if(![[self class] is3DTouchCapable]) {
+        [super setImage:image forState:state];
+        return;
+    }
+    
+    self.stateDictionary = [self updateImage:image forState:state stateDictionary:self.stateDictionary];
+
+    BOOL canUpdateImage              = [self canUpdateImage];
+    self.adjustsImageWhenHighlighted = !canUpdateImage;
+    if(canUpdateImage) {
+        [self insertSubview:self.responsiveImageView aboveSubview:self.imageView];
     }
 
     [self updateImageWithForce:0.0f];
 }
 
+- (nullable UIImage *)imageForState:(UIControlState)state {
+    
+    return [self imageForState:state stateDictionary:self.stateDictionary];
+}
+
 #pragma mark - Background image
 - (void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state {
-    [super setBackgroundImage:image forState:state];
     
-    if([self canUpdateBackgroundImage]) {
-        [self insertSubview:self.responsiveBackgroundImageView atIndex:0];
+    if(![[self class] is3DTouchCapable]) {
+        [super setBackgroundImage:image forState:state];
+        return;
     }
     
-    [self updateBackgroundColorWithForce:0.0f];
+    self.stateDictionary = [[self class] updateBackgroundImage:image forState:state stateDictionary:self.stateDictionary];
+
+    BOOL canUpdateBackgroundImage    = [self canUpdateBackgroundImage];
+    self.adjustsImageWhenHighlighted = !canUpdateBackgroundImage;
+    [self insertSubview:self.backgroundImageView belowSubview:self.imageView];
+    [self insertSubview:self.responsiveBackgroundImageView belowSubview:self.imageView];
+    [self updateBackgroundImageWithForce:0.0f];
+}
+
+- (nullable UIImage *)backgroundImageForState:(UIControlState)state {
+    
+    return [[self class] backgroundImageForState:state stateDictionary:self.stateDictionary];
 }
 
 #pragma mark - Updates
@@ -207,11 +241,15 @@
     
     const UIControlState normalState    = [self normalState];
     const UIControlState highlightState = [self highlightState];
-    UIImage const *normalImage          = [self imageForState:normalState];
-    UIImage const *highlightImage       = [self imageForState:highlightState];
+    UIImage *normalImage                = [self imageForState:normalState stateDictionary:self.stateDictionary];
+    UIImage *highlightImage             = [self imageForState:highlightState stateDictionary:self.stateDictionary];
     
-    self.responsiveImageView.alpha = 0.0f;
-
+    self.responsiveImageView.frame       = self.imageView.frame;
+    self.responsiveImageView.contentMode = self.imageView.contentMode;
+    self.responsiveImageView.image       = highlightImage;
+    self.responsiveImageView.alpha       = force;
+    self.imageView.image                 = normalImage;
+    self.imageView.alpha                 = 1.0f - force;
 }
 
 - (void)updateBackgroundImageWithForce:(const CGFloat)force {
@@ -222,10 +260,18 @@
     
     const UIControlState normalState    = [self normalState];
     const UIControlState highlightState = [self highlightState];
-    UIImage const *normalImage          = [self backgroundImageForState:normalState];
-    UIImage const *highlightImage       = [self backgroundImageForState:highlightState];
+    UIImage *normalImage                = [[self class] backgroundImageForState:normalState stateDictionary:self.stateDictionary];
+    UIImage *highlightImage             = [[self class] backgroundImageForState:highlightState stateDictionary:self.stateDictionary];
     
-    self.responsiveBackgroundImageView.alpha = 0.0f;
+    self.backgroundImageView.frame       = self.bounds;
+    self.backgroundImageView.contentMode = self.contentMode;
+    self.backgroundImageView.image       = normalImage;
+    self.backgroundImageView.alpha       = 1.0f - force;
+    
+    self.responsiveBackgroundImageView.frame       = self.bounds;
+    self.responsiveBackgroundImageView.contentMode = self.contentMode;
+    self.responsiveBackgroundImageView.image       = highlightImage;
+    self.responsiveBackgroundImageView.alpha       = force;
 }
 
 #pragma mark - Utilities

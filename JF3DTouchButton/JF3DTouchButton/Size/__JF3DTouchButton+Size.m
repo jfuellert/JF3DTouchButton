@@ -26,7 +26,11 @@ NSString *const kJF3DTouchButton_KeyStateDictionaryHighlightSize = @"JF3DTouchBu
         return stateDictionary;
     }
     
-    stateDictionary[dictionaryKey] = [NSValue valueWithCGRect:frame];
+    if(CGRectIsNull(frame)) {
+        [stateDictionary removeObjectForKey:dictionaryKey];
+    } else {
+        stateDictionary[dictionaryKey] = [NSValue valueWithCGRect:frame];
+    }
     
     return stateDictionary;
 }
@@ -46,10 +50,8 @@ NSString *const kJF3DTouchButton_KeyStateDictionaryHighlightSize = @"JF3DTouchBu
     switch(state) {
         case UIControlStateNormal:
             return kJF3DTouchButton_KeyStateDictionaryNormalSize;
-            break;
         case UIControlStateHighlighted:
             return kJF3DTouchButton_KeyStateDictionaryHighlightSize;
-            break;
         case UIControlStateSelected:
         case UIControlStateDisabled:
         case UIControlStateReserved:

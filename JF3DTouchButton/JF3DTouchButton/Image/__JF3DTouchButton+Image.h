@@ -11,5 +11,7 @@
 @interface JF3DTouchButton (Image)
 
 - (BOOL)canUpdateImage;
+- (nonnull NSMutableDictionary *)updateImage:(nullable UIImage *)image forState:(UIControlState)state stateDictionary:(nonnull NSDictionary *)stateDictionary;
+- (nullable UIImage *)imageForState:(UIControlState)state stateDictionary:(nonnull NSMutableDictionary *)stateDictionary;
 
 @end

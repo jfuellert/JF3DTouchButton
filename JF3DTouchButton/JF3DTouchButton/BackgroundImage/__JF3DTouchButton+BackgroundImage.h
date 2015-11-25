@@ -11,5 +11,7 @@
 @interface JF3DTouchButton (BackgroundImage)
 
 - (BOOL)canUpdateBackgroundImage;
++ (nonnull NSMutableDictionary *)updateBackgroundImage:(nullable UIImage *)image forState:(UIControlState)state stateDictionary:(nonnull NSDictionary *)stateDictionary;
++ (nullable UIImage *)backgroundImageForState:(UIControlState)state stateDictionary:(nonnull NSMutableDictionary *)stateDictionary;
 
 @end

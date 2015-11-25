@@ -28,9 +28,9 @@ NSString *const kJF3DTouchButton_KeyStateDictionaryHighlightColor = @"JF3DTouchB
     
     if(!backgroundColor) {
         [stateDictionary removeObjectForKey:dictionaryKey];
+    } else {
+        stateDictionary[dictionaryKey] = backgroundColor;
     }
-    
-    stateDictionary[dictionaryKey] = backgroundColor;
     
     return stateDictionary;
 }
@@ -50,10 +50,8 @@ NSString *const kJF3DTouchButton_KeyStateDictionaryHighlightColor = @"JF3DTouchB
     switch(state) {
         case UIControlStateNormal:
             return kJF3DTouchButton_KeyStateDictionaryNormalColor;
-            break;
         case UIControlStateHighlighted:
             return kJF3DTouchButton_KeyStateDictionaryHighlightColor;
-            break;
         case UIControlStateSelected:
         case UIControlStateDisabled:
         case UIControlStateReserved:
