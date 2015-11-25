@@ -113,7 +113,7 @@
     button.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     [button setTitle:NSLocalizedString(@"Deselected", nil)forState:UIControlStateNormal];
     [button setTitle:NSLocalizedString(@"Selected", nil)forState:UIControlStateSelected];
-    [button addTarget:self action:@selector(onButtonSelection:) forControlEvents:UIControlEventTouchUpInside];
+//    [button addTarget:self action:@selector(onButtonSelection:) forControlEvents:UIControlEventTouchUpInside];
 
     return button;
 }

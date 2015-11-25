@@ -152,6 +152,13 @@
 }
 
 #pragma mark - Image states
+- (void)testImageState {
+    
+}
 
+#pragma mark - Background image state
+- (void)testBackgroundImageState {
+    
+}
 
 @end

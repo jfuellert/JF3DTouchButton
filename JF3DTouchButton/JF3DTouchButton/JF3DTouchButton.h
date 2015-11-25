@@ -39,8 +39,6 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface JF3DTouchButton : UIButton
 - (CGSize)sizeForState:(UIControlState)state;
 
 #pragma mark - Image
-
-#warning TODO : Appearance
 /** Sets the image to use for the specified button state. */
 - (void)setImage:(nullable UIImage *)image forState:(UIControlState)state UI_APPEARANCE_SELECTOR;
 
@@ -48,9 +46,6 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface JF3DTouchButton : UIButton
 - (nullable UIImage *)imageForState:(UIControlState)state;
 
 #pragma mark - Background image
-
-#warning TODO : Appearance
-
 /** Sets the background image to use for the specified button state. */
 - (void)setBackgroundImage:(nullable UIImage *)image forState:(UIControlState)state UI_APPEARANCE_SELECTOR;
 
