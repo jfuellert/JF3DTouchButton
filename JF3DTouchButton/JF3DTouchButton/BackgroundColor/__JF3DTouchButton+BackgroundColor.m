@@ -38,7 +38,7 @@ NSString *const kJF3DTouchButton_KeyStateDictionaryHighlightColor = @"JF3DTouchB
 + (nullable UIColor *)backgroundColorForState:(UIControlState)state stateDictionary:(nonnull NSDictionary *)stateDictionary {
 
     NSString *dictionaryKey = [[self class] backgroundColorKeyForState:state];
-    if(!dictionaryKey) {
+    if(!dictionaryKey || ![stateDictionary.allKeys containsObject:dictionaryKey]) {
         return nil;
     }
     

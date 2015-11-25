@@ -8,6 +8,8 @@
 
 @import UIKit;
 
+FOUNDATION_EXPORT const CGSize CGSizeNull NS_AVAILABLE_IOS(9_0);
+
 NS_CLASS_AVAILABLE_IOS(9_0) @interface JF3DTouchButton : UIButton
 
 /** Determines if the background color will change based on a given force. Default is YES. */
@@ -30,7 +32,7 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface JF3DTouchButton : UIButton
 - (nullable UIColor *)backgroundColorForState:(UIControlState)state;
 
 #pragma mark - Size
-/** Sets the size to use for the specified button state. */
+/** Sets the size to use for the specified button state. Use CGSizeNull to remove a size for a state. */
 - (void)setSize:(CGSize)size forState:(UIControlState)state UI_APPEARANCE_SELECTOR;
 
 /** Returns the size for the specified button state. */

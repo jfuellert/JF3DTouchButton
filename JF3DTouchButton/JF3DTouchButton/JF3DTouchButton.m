@@ -11,6 +11,9 @@
 #import "__JF3DTouchButton+Image.h"
 #import "__JF3DTouchButton+Size.h"
 
+#pragma mark - Constants
+const CGSize CGSizeNull = {CGFLOAT_MAX, CGFLOAT_MAX};
+
 @interface JF3DTouchButton ()
 
 @property (nonatomic, strong) NSMutableDictionary *stateDictionary;
@@ -117,9 +120,15 @@
 #pragma mark - Size
 - (void)setSize:(CGSize)size forState:(UIControlState)state {
 
-    CGRect frame         = self.frame;
-    frame.size.width     = size.width;
-    frame.size.height    = size.height;
+    CGRect frame;
+    if(CGSizeEqualToSize(size, CGSizeNull)) {
+        frame = CGRectNull;
+    } else {
+        frame             = self.frame;
+        frame.size.width  = size.width;
+        frame.size.height = size.height;
+    }
+
     self.stateDictionary = [[self class] updateFrame:frame forState:state stateDictionary:self.stateDictionary];
     [self updateSizeWithForce:0.0f];
 }
@@ -128,7 +137,7 @@
 
     CGRect frame = [[self class] frameForState:state stateDictionary:self.stateDictionary];
     if(CGRectIsNull(frame)) {
-        return self.bounds.size;
+        return self.frame.size;
     }
     
     return frame.size;

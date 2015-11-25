@@ -38,7 +38,7 @@ NSString *const kJF3DTouchButton_KeyStateDictionaryHighlightImage = @"JF3DTouchB
 - (nullable UIImage *)imageForState:(UIControlState)state stateDictionary:(nonnull NSDictionary *)stateDictionary {
     
     NSString *dictionaryKey = [[self class] imageKeyForState:state];
-    if(!dictionaryKey) {
+    if(!dictionaryKey || ![stateDictionary.allKeys containsObject:dictionaryKey]) {
         return [super imageForState:state];
     }
     
