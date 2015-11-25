@@ -111,8 +111,8 @@
     
     JF3DTouchButton *button = [[JF3DTouchButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 150.0f, 80.0f)];
     button.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
-    [button setTitle:NSLocalizedString(@"Deselected", nil)forState:UIControlStateNormal];
-    [button setTitle:NSLocalizedString(@"Selected", nil)forState:UIControlStateSelected];
+//    [button setTitle:NSLocalizedString(@"Deselected", nil)forState:UIControlStateNormal];
+//    [button setTitle:NSLocalizedString(@"Selected", nil)forState:UIControlStateSelected];
 //    [button addTarget:self action:@selector(onButtonSelection:) forControlEvents:UIControlEventTouchUpInside];
 
     return button;

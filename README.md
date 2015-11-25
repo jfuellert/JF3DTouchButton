@@ -1,8 +1,10 @@
 # JF3DTouchButton
 JF3DTouchButton is a touch sensitive button built for 3D touch compatible devices. It provides additional state properties and transitional features to improve a user's 3D touch experience.
 
+![alt tag](https://raw.githubusercontent.com/jfuellert/JF3DTouchButton/master/Images/touchbutton.gif)
+
 ##Purpose
-The main purpose of this software is to provide developers with a simple way to add non-intrusive 3D touch button enchancements for applications.
+The main purpose of this software is to provide developers with a simple way to add non-intrusive 3D touch button enhancements for applications.
 
 ##Installation
 Install via CocoaPods
