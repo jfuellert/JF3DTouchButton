@@ -51,8 +51,8 @@ NSString *const kJF3DTouchButton_KeyStateDictionaryHighlightColor = @"JF3DTouchB
         case UIControlStateNormal:
             return kJF3DTouchButton_KeyStateDictionaryNormalColor;
         case UIControlStateHighlighted:
-            return kJF3DTouchButton_KeyStateDictionaryHighlightColor;
         case UIControlStateSelected:
+            return kJF3DTouchButton_KeyStateDictionaryHighlightColor;
         case UIControlStateDisabled:
         case UIControlStateReserved:
         case UIControlStateApplication:

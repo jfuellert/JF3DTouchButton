@@ -49,9 +49,9 @@ NSString *const kJF3DTouchButton_KeyStateDictionaryHighlightImage = @"JF3DTouchB
     
     switch(state) {
         case UIControlStateHighlighted:
+        case UIControlStateSelected:
             return kJF3DTouchButton_KeyStateDictionaryHighlightImage;
         case UIControlStateNormal:
-        case UIControlStateSelected:
         case UIControlStateDisabled:
         case UIControlStateReserved:
         case UIControlStateApplication:

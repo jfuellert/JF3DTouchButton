@@ -52,8 +52,8 @@ NSString *const kJF3DTouchButton_KeyStateDictionaryHighlightBackgroundImage = @"
         case UIControlStateNormal:
             return kJF3DTouchButton_KeyStateDictionaryNormalBackgroundImage;
         case UIControlStateHighlighted:
-            return kJF3DTouchButton_KeyStateDictionaryHighlightBackgroundImage;
         case UIControlStateSelected:
+            return kJF3DTouchButton_KeyStateDictionaryHighlightBackgroundImage;
         case UIControlStateDisabled:
         case UIControlStateReserved:
         case UIControlStateApplication:
