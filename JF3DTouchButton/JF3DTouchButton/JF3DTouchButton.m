@@ -296,7 +296,7 @@ const CGSize CGSizeNull = {CGFLOAT_MAX, CGFLOAT_MAX};
 
 + (BOOL)is3DTouchCapable {
     
-    return [UITraitCollection traitCollectionWithForceTouchCapability:UIForceTouchCapabilityAvailable];
+    return [UITraitCollection traitCollectionWithForceTouchCapability:UIForceTouchCapabilityAvailable] ? YES : NO;
 }
 
 @end
