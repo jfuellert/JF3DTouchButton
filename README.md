@@ -15,7 +15,7 @@ pod 'JF3DTouchButton'
 ```
 ##Support
 ####IOS
-Earliest tested and supported build and deployment target - iOS 9.0.
+Earliest tested and supported build and deployment target - iOS 9.0.  
 Latest tested and supported build and deployment target - iOS 9.1.
 
 ##ARC Compatibility
